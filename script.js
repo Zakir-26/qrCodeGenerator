@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const generateButton = document.getElementById('generateButton');
       const qrCodeImage = document.getElementById('qrCodeImage');
       const loadingSpinner = document.getElementById('loadingSpinner');
+      const imageDiv = document.getElementById('imageishare');
+      imageDiv.style.display = 'none';
 
       generateButton.addEventListener('click', function() {
         const inputText = document.getElementById('inputText').value.trim();
@@ -10,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (inputText !== '') {
           loadingSpinner.style.display = 'block';
+          imageDiv.style.display = 'block';
 
           // Simulate loading time with a timeout
           setTimeout(() => {
